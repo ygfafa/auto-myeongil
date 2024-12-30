@@ -1,0 +1,35 @@
+{
+  "name": "코트 예약 프로그램",
+  "description": "선택한 코드를 자동으로 입력해서 예약해주는 프로그램입니다.",
+  "version": "1.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon-16.png",
+      "32": "/images/icon-32.png",
+      "64": "/images/icon-64.png",
+      "128": "/images/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icon-16.png",
+    "32": "/images/icon-32.png",
+    "64": "/images/icon-64.png",
+    "128": "/images/icon-128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://online.igangdong.or.kr/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

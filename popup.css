@@ -1,0 +1,50 @@
+body {
+  width: 100vw;
+  padding: 12px;
+}
+
+body {
+  padding: 20px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 20px;
+  margin: 0;
+  margin-right: 12px;
+  width: 52px;
+}
+
+select {
+  width: 240px;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+button {
+  outline: none;
+  background: #222;
+  color: #fff;
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #555;
+}
